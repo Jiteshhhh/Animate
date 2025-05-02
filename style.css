@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    color: #fff;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+nav{
+    position: fixed;
+    background: #000000;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 12vh;
+    padding: 2vw 10.4vw;
+    justify-content: space-between;
+    z-index: 10;
+}
+.nav-part2{
+    display: flex;
+    gap: 2vw;
+    align-items: flex-start;
+    padding: 1vh 0;
+    position: relative;
+    z-index:10;
+} 
+.nav-part2 h4{
+    font-size: 0.8vw;
+    text-transform: uppercase;
+    font-weight: 650;
+    margin-bottom: 2.6vw;
+}
+.nav-part2 h5{
+    margin-bottom: 0.5vw;
+    transition: 3s;
+    /* background-color: red; */
+    display: none;
+    opacity: 0;
+    transform: translateX(20px);
+
+}
+.nav-part2 h5 span:hover {
+    color: #0DA34E; /* Green color on hover */
+}
+.nav-part2 h5 {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    display: block; /* always block so it can animate */
+}
+
+.nav-elm:hover h5 {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.bottom-div{
+    margin-top: 2vw;
+}
+.bottom-div h5{
+    /* background: red; */
+    overflow: hidden;
+    margin-bottom: 0.4vw;
+
+}
+.bottom-div h5 span{
+    font-weight: 500;
+    display: inline-block;
+    font-size: 0.76vw;
+    opacity: 0;
+}
+nav button{
+    background-color: #0DA34E;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px ;
+    border-radius: 20px;
+    font-size: 0.8vw;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+nav button svg{
+    height: 1vw;
+    margin-left: 2vw;
+}
+#nav-bottom{
+    width: 79%;
+    height: 0vh;
+    position: absolute;
+    background-color: black;
+    transition: all ease 0.65s;
+    top: 100%;
+    z-index: 9;
+    border-bottom: 1px solid #fff;
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+#page1 h1{
+    font-size: 8.5vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 8.5vw;
+    
+}
+#page1 h1 svg{
+    height: 6vw;
+    width: 6vw;
+    background-color: #0DA34E;
+    border-radius: 50%;
+}
+#page1 p{
+    text-align: center;
+    font-weight: 400;
+    margin-top: 3vh;
+}
+#page1-something{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page1-something h4{
+    font-weight: 400;
+    font-size: 1vw;
+    text-transform: lowercase;
+    padding: 5px 10px;
+    border: 1px solid #a5a5aa;
+    border-radius: 50px;
+}
+#page1-something h4:nth-last-child(2){
+    border: none;
+}
+#moving-div{
+    /* background-color: red; */
+    margin-top: 10vh;
+    position: absolute;
+    bottom:3%;
+    white-space: nowrap;
+    padding: 1.2vw;
+    overflow: hidden;
+    width:44%;
+}
+#moving-div .move{
+    display: inline-block;
+    animation-name: mobe;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#moving-div .move img{
+    height: 1vw;
+    margin: 0 1vw;
+}
+@keyframes mobe {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+
+}
+#blur-left{
+    background: linear-gradient(to left,transparent, #000000);
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+#blur-right{
+    background: linear-gradient(to right,transparent, #000000);
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    top: 0;
+    right: 0;   
+}
+#page2{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    position: relative;
+    padding: 0vw 10.5vw;
+    padding-bottom: 7vw;
+    border-top: 1px solid rgb(39, 39, 39);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#page2-left{
+    height: 100%;
+    width: 45%;
+    /* background: #333333; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 3vw 0;
+}
+#page2-left p{
+    font-size: 1vw;
+}
+#page2-left h5{
+    width: 70%;
+    font-weight: 400;
+    font-size: 1.1vw;
+}
+#page2-right{
+    height: 100%;
+    width: 50%;
+    /* background: #333333; */
+}
+.right-elem{
+    position: relative;
+    /* background-color: red; */
+    padding-top: 2vw;
+    padding-bottom: 5vw;
+    border-bottom: 1px solid rgb(62, 62, 62);
+}
+.right-elem h2{
+    font-size: 1.4vw;
+    font-weight: 400;
+
+}
+.right-elem img{
+    height: 7vw;
+    width: 7vw;
+    border-radius: 50%;
+    object-fit: cover;
+    position:absolute;
+    opacity: 0;
+    scale:0;
+}
